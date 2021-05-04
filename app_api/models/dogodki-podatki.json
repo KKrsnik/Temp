@@ -1,0 +1,200 @@
+[
+  {
+    "title": "",
+    "ime_dogodka": "Novo leto",
+    "mesto": "Ljubljana",
+    "naslov": "",
+    "prostor": "online",
+    "organizator": "Občina Ljubljana",
+    "tip": "free",
+    "max_ljudi": 500,
+    "kreator": "",
+    "prijavljeni": 0,
+    "datum": "2020-12-30T23:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Pričakanje novega leta. Letos preko live videa zaradi posebnih razmer in korona virusa",
+    "komentarji": [],
+    "koordinate": []
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Miklavž pri Prešernu",
+    "mesto": "Kranj",
+    "naslov": "Trg",
+    "prostor": "online",
+    "organizator": "Občina Kranj",
+    "tip": "free",
+    "max_ljudi": 5000,
+    "kreator": "",
+    "prijavljeni": 0,
+    "datum": "2020-12-16T11:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Miklavž prek interneta",
+    "komentarji": [],
+    "koordinate": []
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Božič na Trubrarju",
+    "mesto": "Kranj",
+    "naslov": "Trubarjev trg",
+    "prostor": "outside",
+    "organizator": "Občina Kranj",
+    "tip": "doanation",
+    "max_ljudi": 100,
+    "kreator": "",
+    "prijavljeni": 25,
+    "datum": "2020-12-01T18:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "5",
+    "opis": "Za Božička v Živo!",
+    "komentarji": [],
+    "koordinate": [
+      46.23605083490668,
+      14.356143008120856
+    ]
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Maša",
+    "mesto": "Celje",
+    "naslov": "Cerkev sv. Danijel",
+    "prostor": "inside",
+    "organizator": "Župnija Celje",
+    "tip": "free",
+    "max_ljudi": 100,
+    "kreator": "",
+    "prijavljeni": 80,
+    "datum": "2020-12-04T08:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Maša za ljudi",
+    "komentarji": [],
+    "koordinate": [
+      46.227355167572156,
+      15.264826313451728
+    ]
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Vojna in mir",
+    "mesto": "Ljubljana",
+    "naslov": "NUK",
+    "prostor": "inside",
+    "organizator": "NUK",
+    "tip": "free",
+    "max_ljudi": 20,
+    "kreator": "",
+    "prijavljeni": 5,
+    "datum": "2020-12-03T15:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Javno blarnje knjige Vonja in mir",
+    "komentarji": [],
+    "koordinate": [
+      46.04775061927101,
+      14.503999284761532
+    ]
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Vojna in mir predhodna",
+    "mesto": "Ljubljana",
+    "naslov": "NUK",
+    "prostor": "inside",
+    "organizator": "NUK",
+    "tip": "free",
+    "max_ljudi": 20,
+    "kreator": "",
+    "prijavljeni": 5,
+    "datum": "2020-11-03T15:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Javno blarnje knjige Vonja in mir",
+    "komentarji": [
+      {
+        "ocena": 5,
+        "vsebina": "odlicno"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "zelo dobro"
+      },
+      {
+        "ocena": 4,
+        "vsebina": "prav dobro"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "pridem še kdaj"
+      },
+      {
+        "ocena": 4,
+        "vsebina": "zanimivo"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "vedno pridem"
+      }
+    ],
+    "koordinate": [
+      46.04775061927101,
+      14.503999284761532
+    ]
+  },
+  {
+    "title": "",
+    "ime_dogodka": "Maša Prej",
+    "mesto": "Celje",
+    "naslov": "Cerkev sv. Danijel",
+    "prostor": "inside",
+    "organizator": "Župnija Celje",
+    "tip": "free",
+    "max_ljudi": 100,
+    "kreator": "",
+    "prijavljeni": 80,
+    "datum": "2020-11-03T15:00:00.000Z",
+    "ura": "",
+    "vreme": "",
+    "cena": "0",
+    "opis": "Maša za ljudi",
+    "komentarji": [
+      {
+        "ocena": 3,
+        "vsebina": "dokaj dobro"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "zelo dobro"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "odlično"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "pridem še kdaj"
+      },
+      {
+        "ocena": 1,
+        "vsebina": "nisem veren"
+      },
+      {
+        "ocena": 5,
+        "vsebina": "vedno pridem"
+      }
+    ],
+    "koordinate": [
+      46.227355167572156,
+      15.264826313451728
+    ]
+  }
+]

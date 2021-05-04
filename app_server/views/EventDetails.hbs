@@ -1,0 +1,69 @@
+<div class="container">
+    <h1>{{dogodek.ime_dogodka}}</h1>
+
+    <div class="row">
+        <div class="col-md-9">
+            <p class="text-danger">Maksimalno število ljudi na tem dogodku je {{dogodek.max_ljudi}}!</p>
+
+            <p>Trenutno prijavljeni:</p>
+            <div class="progress" style="width:30%">
+                <div class="progress-bar bg-success" role="progressbar"
+                     aria-valuenow="{{dogodek.prijavljeni}}" aria-valuemin="0" aria-valuemax="{{dogodek.max_ljudi}}"
+                     style="width:{{zasedenost dogodek.max_ljudi dogodek.prijavljeni}}%">{{dogodek.prijavljeni}}
+                </div>
+            </div>
+            <form method="post" action="/dogodki/{{dogodek._id}}/prijavi">
+                <button  class="btn btn-outline-primary" style="margin-top:5px">Prijava</button>
+            </form>
+        </div>
+
+        <div id="weather" style="" class="col-md-3 vreme">
+            <p>Vremenska napoved za {{datumHome dogodek.datum}}:</p>
+            <p id="weatherDescription" class="fas fa-2x"></p>
+            <p id="weatherTemp" class="fas">Napoved je možna samo za 5 dni naprej</p>
+            <p id="weatherFeelsLike" class="fas"></p>
+            <p>Dogodek se bo izvedel!</p>
+        </div>
+    </div>
+
+
+    <h2>Podrobnosti dogodka:</h2>
+    <table class="table table-hover table-bordered table-striped">
+        <tr>
+            <td>Ime dogodka</td>
+            <td>{{dogodek.ime_dogodka}}</td>
+        </tr>
+        <tr>
+            <td>Organizator dogodka</td>
+            <td>{{dogodek.organizator}}</td>
+        </tr>
+        <tr>
+            <td>Kraj dogodka</td>
+            <td>{{dogodek.mesto}}</td>
+        </tr>
+        <tr>
+            <td>Čas dogodka</td>
+            <td>{{datumHome dogodek.datum}}</td>
+        </tr>
+        <tr>
+            <td>Cena dogodka</td>
+            <td>{{dogodek.cena}}€</td>
+        </tr>
+        <tr>
+            <td>Opis dogodka</td>
+            <td>{{dogodek.opis}}
+            </td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Dodatne informacije:</h2>
+            {{{dogodek.dodatno}}}
+        </div>
+
+        <div class="embed-responsive embed-responsive-16by9 col-md-6">
+            <iframe src="https://maps.google.com/maps?q={{dogodek.koordinate.[0]}},{{dogodek.koordinate.[1]}}&z=15&output=embed" onload="getWeather({{dogodek.koordinate.[0]}},{{dogodek.koordinate.[1]}}, '{{dogodek.datum}}')" ></iframe>
+        </div>
+    </div>
+</div>

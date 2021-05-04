@@ -1,0 +1,48 @@
+input[type=email], input[type=password] , input[id=username], input[type=text]{
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #6AEBD7;
+    box-sizing: border-box;
+}
+#dodajUporabnik {
+    border: 3px solid #6AEBD7;
+}
+#prijavaform {
+    border: 3px solid #6AEBD7;
+}
+button[id=register]{
+    background-color: #6AEBD7;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.6;
+}
+.container {
+    padding: 25px;
+    background-color: white;
+    color:black;
+}
+div[id=cont]{
+    text-align: right;
+   }
+#navbarid{
+    background-color:#0AC5A8;
+}
+#navbarbutton{
+    color:black;
+    border-color:#6AEBD7;
+}
+#navbarsearch{
+    border-color:black;
+}
+#navbarbutton:hover{
+    background-color: #6AEBD7;
+    opacity:50%;
+}

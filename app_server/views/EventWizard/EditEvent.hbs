@@ -1,0 +1,108 @@
+<form id="editEventForm2" method="post" role="form" action="/dogodki/{{dogodek._id}}/posodobi">
+<div class="container">
+    {{#if sporocilo}}
+        <div class="alert alert-warning">{{sporocilo}}</div>
+    {{else}}
+        <h2>Dodajanje novega dogodka</h2>
+        <p>Vnesite podatke za želen dogodek</p>
+        <div class="form-group">
+            <label>Ime vašega dogodka:</label>
+            <input type="text" class="form-control" name="ime_dogodka" value="{{dogodek.ime_dogodka}}">
+        </div>
+        <div class="form-group">
+            <label>Kje bo vaš dogodek potekal(naslov):</label>
+            <input type="text" class="form-control" name="naslov" value="{{dogodek.naslov}}">
+        </div>
+        <div class="form-group">
+            <label>Najbližje večje mesto:</label>
+            <input type="text" class="form-control" name="mesto" value="{{dogodek.mesto}}">
+        </div>
+        <div class="form-group">
+            <label>Organizator dogodka:</label>
+            <input type="text" class="form-control" name="organizator" value="{{dogodek.organizator}}">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12-col-md-6" style="margin-right: 20px">
+                    <div class="form-group">
+                        <label>Tip dogodka:</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="tip" value="paid" {{setChecked "paid"
+                                                                                                                  dogodek.tip}}>Plačljiv
+                                vstop
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="tip" value="free" {{setChecked "free"
+                                                                                                                  dogodek.tip}} >Prost
+                                vstop
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="tip" value="donation" {{setChecked
+                                        "donation" dogodek.tip}}>Dobrodelni nameni
+                                (donacije)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12-col-md-6">
+                    <div class="form-group">
+                        <label>Prireditveni prostor:</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="prostor" value="inside" {{{setChecked
+                                        "inside" dogodek.prostor}}}>Pokrit prireditveni
+                                prostor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="prostor"
+                                       value="outside" {{{setChecked "outside" dogodek.prostor}}}>Na prostem (brez
+                                strehe)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="prostor" value="online" {{{setChecked
+                                        "online" dogodek.prostor}}}>Virtualno
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row form-group">
+                <div class="col-xs-12-col-md-4 nejcRows">
+                    <label>Kdaj bo vaš dogodek potekal:</label>
+                    <input type="datetime-local" class="form-control" name="datum" value={{datumIzpisVInputu
+                            dogodek.datum}}>
+                </div>
+                <div class="col-xs-12-col-md-4 nejcRows">
+                    <label>Cena dogodka (€):</label>
+                    <input type="number" class="form-control" name="cena" value="{{dogodek.cena}}">
+                </div>
+                <div class="col-xs-12-col-md-4">
+                    <label>Dovoljeno število prisotnih:</label>
+                    <input type="number" class="form-control" name="max_ljudi" value="{{dogodek.max_ljudi}}">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Daljši in podrobnejši opis dogodka (vsaj 50 znakov):</label>
+            <textarea class="form-control" rows="15" name="opis">{{dogodek.opis}}</textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Potrdi</button>
+            <button href="/myEvents" type="button" class="btn btn-light">Prekliči</button>
+        </div>
+    </div>
+    {{/if}}
+</form>

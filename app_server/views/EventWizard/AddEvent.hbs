@@ -1,0 +1,94 @@
+<form id="dodajDogodek" action="" method="post" role="form" onsubmit="return ValidateAddEventForm(this)">
+    <div class="container">
+        <h2>Dodajanje novega dogodka</h2>
+        <p>Vnesite podatke za želen dogodek</p>
+        <div class="form-group">
+            <label>Ime vašega dogodka:</label>
+            <input id="ime_dogodka" type="text" class="form-control" name="ime_dogodka">
+        </div>
+        <div class="form-group">
+            <label>Kje bo vaš dogodek potekal(naslov):</label>
+            <input id="naslov" type="text" class="form-control" name="naslov">
+        </div>
+        <div class="form-group">
+            <label>Najbližje večje mesto:</label>
+            <input id="mesto" type="text" class="form-control" name="mesto">
+        </div>
+        <div class="form-group">
+            <label>Organizator dogodka:</label>
+            <input id="organizator" type="text" class="form-control" name="organizator">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12-col-md-6" style="margin-right: 20px">
+                    <div class="form-group">
+                        <label>Tip dogodka:</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="paid" type="radio" class="form-check-input" name="tip" value="paid">Plačljiv vstop
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="free" checked type="radio" class="form-check-input" name="tip" value="free">Prost vstop
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="donation" type="radio" class="form-check-input" name="tip" value="donation">Dobrodelni nameni
+                                (donacije)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12-col-md-6">
+                    <div class="form-group">
+                        <label>Prireditveni prostor:</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="inside" type="radio" class="form-check-input" name="prostor" value="inside">Pokrit prireditveni
+                                prostor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="outside" type="radio" class="form-check-input" name="prostor" value="outside">Na prostem (brez strehe)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="online" checked type="radio" class="form-check-input" name="prostor" value="online">Virtualno
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row form-group">
+                <div class="col-xs-12-col-md-4 nejcRows">
+                    <label>Kdaj bo vaš dogodek potekal:</label>
+                    <input id="datum" type="datetime-local" class="form-control" name="datum">
+                </div>
+                <div class="col-xs-12-col-md-4 nejcRows">
+                    <label>Cena dogodka (€):</label>
+                    <input id="cena" type="number" value="0" class="form-control" name="cena">
+                </div>
+                <div class="col-xs-12-col-md-4">
+                    <label>Dovoljeno število prisotnih:</label>
+                    <input id="max_ljudi" type="number" value="50" class="form-control" name="max_ljudi">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Daljši in podrobnejši opis dogodka (vsaj 50 znakov):</label>
+            <textarea id="opis" class="form-control" rows="15" name="opis"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Potrdi</button>
+            <button href="/myEvents" type="button" class="btn btn-light">Prekliči</button>
+        </div>
+    </div>
+</form>

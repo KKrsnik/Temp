@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 15rem;
+    background: white;
+}
+
+.show {
+    display: block;
+}
+
+.textTop {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.EventIcon {
+    height: 5rem;
+}
+.anonimno {
+  color: grey;
+  font-style: italic;
+}
+
+.vreme {
+  border-style: solid;
+  border-width: 2px;
+  border-color: limegreen;
+  border-radius: 30px;
+  text-align: center;
+}

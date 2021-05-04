@@ -1,0 +1,75 @@
+<div class="container">
+    <h1>{{ime_dogodka}}</h1>
+
+    <div style="text-align: center">
+        <h2>Povprečna ocena dogodka:</h2>
+        <div>{{{zvezdice ocena}}}</div>
+    </div>
+
+    <h2>Podrobnosti dogodka:</h2>
+    <table class="table table-hover table-bordered table-striped">
+        <tr>
+            <td>Ime dogodka</td>
+            <td>{{ime_dogodka}}</td>
+        </tr>
+        <tr>
+            <td>Organizator dogodka</td>
+            <td>{{organizator}}</td>
+        </tr>
+        <tr>
+            <td>Kraj dogodka</td>
+            <td>{{mesto}}</td>
+        </tr>
+        <tr>
+            <td>Čas dogodka</td>
+            <td>{{datumHome datum}}</td>
+        </tr>
+        <tr>
+            <td>Cena dogodka</td>
+            <td>{{cena}}€</td>
+        </tr>
+        <tr>
+            <td>Opis dogodka</td>
+            <td>{{opis}}
+            </td>
+        </tr>
+    </table>
+
+    <form method="POST" action="/dogodki/{{_id}}/komentar/nov">
+        <div class="container">
+            <div class="form-group">
+                <label>Komentar:</label>
+                <textarea id="tekst" class="form-control" name="tekst"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Ocenite svoje izkušnje</label>
+                <select name="ocena" id="ocena">
+                    <option>5</option>
+                    <option>4</option>
+                    <option>3</option>
+                    <option>2</option>
+                    <option>1</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Pošlji</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-hover">
+        <tr>
+            <th>Oseba</th>
+            <th>Ocena</th>
+            <th>Komentar</th>
+        </tr>
+        {{#each komentarji as |komentar|}}
+            <tr>
+                {{{anonimnost komentar.ime}}}
+                <td>{{komentar.ocena}}/5</td>
+                <td>{{komentar.vsebina}}</td>
+            </tr>
+        {{/each}}
+    </table>
+
+</div>

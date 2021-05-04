@@ -1,0 +1,24 @@
+<center> <h1> Obrazec za registracijo </h1> </center>
+<form id="dodajUporabnik" action ="" method="post" role="form" onSubmit="return ValidateEmail(this)&&ValidatePassword(this)&&checkPassword(this)&&ValidateUsername(this)">
+    <div class="container">
+        <label>Elektronski naslov : </label>
+        <input type="text" placeholder="Vnesite elektronski naslov" name="email" id="email" required >
+        <label>Uporabniško ime : </label>
+        <input  type="text" placeholder="Vnesite željeno uporabniško ime" name="username" id="username" required>
+        <label>Geslo : </label>
+        <input  type="password" id="password" placeholder="Vnesite geslo" name="password" required
+               title="Geslo mora vsebovati vsaj eno številko, eno malo črko, eno veliko črko in biti dolžine vsaj 8 znakov">
+        <label>Ponovno vnesite geslo : </label>
+        <input  type="password" placeholder="Vnesite geslo" name="password2" required
+               title="Geslo mora vsebovati vsaj eno številko, eno malo črko, eno veliko črko, en znak  in biti dolžine saj dolžine 8">
+        <input type="checkbox" required > Strinjam se s
+        <a href="/splosnipogoji">splošnimi pogoji registracije. </a>
+        <br>
+        <button id="register">Registriraj se</button>
+        <br>
+        Že imaš račun?
+        <a href="/prijava">Prijavi se </a>
+    </div>
+</form>
+
+

@@ -1,0 +1,36 @@
+{
+  "name": "lp-06",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dogodki-uvoz": "docker cp app_api/models/dogodki-podatki.json sp-slogodki-mongodb:/dogodki-podatki.json && docker exec -it sp-slogodki-mongodb mongoimport --db Slogodki --collection Dogodek --mode upsert --upsertFields ime_dogodka --jsonArray --file dogodki-podatki.json && docker exec -it sp-slogodki-mongodb rm -rf dogodki-podatki.json && docker exec -it sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Dogodek.find().forEach(function(dokument) { for (var i = 0; i < dokument.komentarji.length; i++) { dokument.komentarji[i]._id = ObjectId() } db.Dogodek.update({ \"_id\" : dokument._id }, dokument) })'\"",
+    "dogodki-brisi": "docker exec -it sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Dogodek.remove({})'\"",
+    "dogodki-prikazi": "docker exec -it sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Dogodek.find().pretty()'\"",
+
+    "dogodki-init": "docker cp app_api/models/dogodki-podatki.json sp-slogodki-mongodb:/dogodki-podatki.json && docker exec sp-slogodki-mongodb mongoimport --db Slogodki --collection Dogodek --mode upsert --upsertFields ime_dogodka --jsonArray --file dogodki-podatki.json && docker exec sp-slogodki-mongodb rm -rf dogodki-podatki.json && docker exec sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Dogodek.find().forEach(function(dokument) { for (var i = 0; i < dokument.komentarji.length; i++) { dokument.komentarji[i]._id = ObjectId() } db.Dogodek.update({ \"_id\" : dokument._id }, dokument) })'\"",
+    "dogodki-zbrisi": "docker exec sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Dogodek.remove({})'\"",
+
+    "dogodki-init-uporabnik": "docker cp app_api/models/uporabniki-podatki.json sp-slogodki-mongodb:/uporabniki-podatki.json && docker exec sp-slogodki-mongodb mongoimport --db Slogodki --collection Uporabnik --mode upsert --upsertFields username --jsonArray --file uporabniki-podatki.json && docker exec sp-slogodki-mongodb rm -rf uporabniki-podatki.json",
+    "dogodki-zbrisi-uporabnik": "docker exec sp-slogodki-mongodb bash -c \"mongo Slogodki --eval 'db.Uporabnik.remove({})'\""
+  },
+  "engines": {
+    "node": ">=14.15.0",
+    "npm": ">=6.14.8"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "*",
+    "hbs": "^4.1.1",
+    "heroku": "*",
+    "http-errors": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "node-cmd": "*",
+    "node-geocoder": "*",
+    "nodemailer": "*"
+  }
+}
