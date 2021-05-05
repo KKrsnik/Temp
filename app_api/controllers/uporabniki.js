@@ -109,7 +109,6 @@ const uporabnikiIzbrisiIzbrano = (req, res) => {
     }
 };
 
-
 module.exports = {
     uporabnikiKreiraj,
     shraniUporabnika,

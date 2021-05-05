@@ -55,7 +55,7 @@ const getDogodkiSeznam = (req, res) => {
 }
 
 const dogodkiSeznamPrikaz = (req, res, dogodki, sporocilo) => {
-    res.render('Home', {
+    res.render('domacaStran', {
         title: 'Seznam dogodkov',
         dogodki,
         sporocilo: sporocilo

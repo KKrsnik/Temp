@@ -1,0 +1,19 @@
+.elementsContainer {
+  width: 100%;
+  float: left;
+  background-color: darkseagreen;
+  height: auto;
+  padding-top: 2rem;
+}
+
+.dataGrid .row .col {
+  text-align: right
+}
+
+.dataGrid .row .col-9 {
+  text-align: left
+}
+
+.myList button {
+  background-color: darkseagreen;
+}

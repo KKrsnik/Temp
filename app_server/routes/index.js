@@ -24,9 +24,21 @@ router.get('/registracija', ctrlLogin.registracija);
 router.get('/pozabljenogeslo', ctrlLogin.pozabljenogeslo);
 router.get('/splosnipogoji', ctrlLogin.splosnipogoji);
 router.post('/registracija', ctrlUporabniki.shraniUporabnika);
-router.post('/prijava', ctrlUporabniki.preveriUporabnika);
+//router.post('/prijava', ctrlUporabniki.preveriUporabnika);
+router.get('/prijava', ctrlMain.prijava)
+router.get('/profil', ctrlMain.profil)
+router.get('/registracija', ctrlMain.registracija)
+router.get('/top10', ctrlMain.top10)
+router.get('/servicesList', ctrlMain.servicesList)
+router.get('/objava', ctrlMain.objava)
+
+
+
+
+
 router.get('/sendMail', ctrlMail.sendMail)
 router.get('/dogodki/:idDogodka', ctrlMain.eventRating);
+router.get('/home', ctrlMain.home)
 
 router.post('/dogodki/:idDogodka/komentar/nov', ctrlMain.shraniKomentar);
 router.post('/dogodki/:idDogodka/prijavi', ctrlDogodki.prijavi);

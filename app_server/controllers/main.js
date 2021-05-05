@@ -23,15 +23,34 @@ const init = (req, res) => {
     res.redirect('/db');
 }
 
+
 const brisi = (req, res) => {
     cmd.run('npm run dogodki-zbrisi');
     cmd.run('npm run dogodki-zbrisi-uporabnik');
     res.redirect('/db')
 }
 
+const prijava = (req, res) => {
+    res.render('prijava');
+}
+const profil = (req, res) => {
+    res.render('profil');
+}
+const registracija = (req, res) => {
+    res.render('registracija');
+}
+const top10 = (req, res) => {
+    res.render('top10');
+}
+const objava = (req, res) => {
+    res.render('objava');
+}
+const servicesList = (req, res) => {
+    res.render('servicesList');
+}
 /* GET home page */
 const home = (req, res) => {
-    res.render('Home', [{
+    res.render('domacaStran', [{
         title: 'Podrobnosti dogodka',
         ime_dogodka: 'Miti in resnice o odnosih',
         max_ljudi: 50,
@@ -52,7 +71,7 @@ const home = (req, res) => {
             '<li>V primeru slabega vremena se bo dogodek prestavil na 17.11.2020 ob 18:00</li>' +
             '<li>Zaradi koronavirusa velja stroga omejitev na 50 obiskovalcev! Če si želite zagotoviti mesto, se čim prej prijavite.</li>' +
             '</ul>',
-        slika: '<img src="/images/NarodniDom.png" class="img-fluid" alt="kraj dogodka">'
+        slika: '<img src="/img/NarodniDom.png" class="img-fluid" alt="kraj dogodka">'
 
 
     }]);
@@ -86,6 +105,7 @@ const eventRating = (req, res) => {
                 prikaziNapako(req, res, napaka);
             });
 };
+
 
 const showEventRating = (req, res, eventRating) => {
     res.render('eventRating', {
@@ -122,6 +142,7 @@ const eventArchive = (req, res) => {
             eventArchiveShow(req, res, [], "Napaka API-ja pri iskanju dogodka.");
         });
 };
+
 
 const eventArchiveShow = (req, res, dogodki) => {
     res.render('EventArchive', {
@@ -212,9 +233,15 @@ const prikaziNapako = (req, res, napaka) => {
 };
 
 module.exports = {
+    registracija,
+    prijava,
+    servicesList,
     brisi,
     init,
+    profil,
     db,
+    top10,
+    objava,
     home,
     eventDetails,
     eventRating,
